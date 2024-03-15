@@ -67,8 +67,8 @@ bot.onText(/\/start/, async (msg) => {
   bot.sendMessage(chatId, 'Welcome to the bot! What would you like to do?', {
     reply_markup: {
       keyboard: [
-        [{ text: 'Option 1' }, { text: 'Option 2' }],
-        [{ text: 'Option 3' }, { text: 'Option 4' }],
+        [{ text: 'Harsh help' }, { text: 'Ask your Doubt' }],
+        [{ text: 'Options 1' }, { text: 'Option 4' }],
       ],
       resize_keyboard: true,
     },
@@ -82,21 +82,24 @@ bot.on('message', (msg) => {
 
   // Handle button clicks based on the message text
   switch (messageText) {
-    case 'Option 1':
+    case 'Harsh help':
       // Perform action for Option 1
-      bot.sendMessage(chatId, 'You clicked Option 1.');
+      bot.sendMessage(
+        chatId,
+        'I can help you to grow your knowledge in the field of Bots'
+      );
       break;
-    case 'Option 2':
+    case 'Ask your Doubt':
       // Perform action for Option 2
-      bot.sendMessage(chatId, 'You clicked Option 2.');
+      bot.sendMessage(chatId, 'You can ask me any doubt related to you code ');
       break;
-    case 'Option 3':
+    case 'Option 1':
       // Perform action for Option 3
-      bot.sendMessage(chatId, 'You clicked Option 3.');
+      bot.sendMessage(chatId, 'You clicked for other Options we can assist.');
       break;
     case 'Option 4':
       // Perform action for Option 4
-      bot.sendMessage(chatId, 'You clicked Option 4.');
+      bot.sendMessage(chatId, 'You clicked for chit chat conversation.');
       break;
     default:
       // Ignore other messages
