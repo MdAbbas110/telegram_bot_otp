@@ -36,3 +36,10 @@ async function verifyCode(allegedCode, chatId) {
     await mongoClient.close();
   }
 }
+mongoose.connect(
+  'mongodb+srv://Abbas-admin:Yaalimadad110@cluster0.bjdhxec.mongodb.net/',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
